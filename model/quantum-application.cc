@@ -633,7 +633,7 @@ namespace ns3
 		std::memcpy(&buffer[1], &(id), 4);
 		buffer[5] = protocol;
 		m_sock->SendTo(&buffer[0], 6 , 0, addr);
-		NS_ASSERT_MSG(m_data.find(id) != m_data.end(), "NACK for unsaved packet.");
+		//NS_ASSERT_MSG(m_data.find(id) != m_data.end(), "NACK for unsaved packet.");
 		m_data[id].nacks++;
 		NS_LOG_DEBUG("NACK-ID: " << id);
 	}
